@@ -30,8 +30,7 @@ python3 preprocess_mnist.py
 
 To train the models, run:
 ```
-th main.lua --ydim <n-classes> --zdim <latent-style-dim> --epochs <n-epochs>
---batch <batch-size> [--cuda]
+th main.lua --ydim <n-classes> --zdim <latent-style-dim> --epochs <n-epochs> --batch <batch-size> [--cuda]
 ```
 
 Add `--cuda` for GPU training.
