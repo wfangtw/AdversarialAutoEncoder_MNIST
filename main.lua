@@ -7,7 +7,7 @@ Training script for adversarial autoencoder (AAE)
     -d,--data   (default mnist)         Dataset: {mnist}
     -y,--ydim   (default 10)						Number of classes
 		-z,--zdim   (default 20)						Latent style dimension
-    -e,--epochs	(default 10)            Number of training epochs
+    -e,--epochs	(default 5)             Number of training epochs
 		-b,--batch	(default 100)						Batch size
     -o,--output (default blah)          Output numpy file path
     -c,--cuda                           Cuda
@@ -15,9 +15,9 @@ Training script for adversarial autoencoder (AAE)
 
 local data_dir
 if args.data == 'mnist' then
-  data_dir = '../npy_mnist/'
+  data_dir = './npy_mnist/'
 else
-  data_dir = '../npy_cifar10/'
+  data_dir = './npy_cifar10/'
 end
 
 local train_X = npy4th.loadnpy(data_dir .. 'train_X.npy') / 255
